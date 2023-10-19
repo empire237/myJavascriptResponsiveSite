@@ -1,18 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+    font-family: Merriweather;
+}
 
 body {
     font-size: 1.5rem;
     background-color: aliceblue;
     max-width: 100vw;
+    font-family: Merriweather;
+
 }
 
 
  /* POSITIONING NAV Menu Button*/
+#nav__background img {
+    background-image: url(/images/MONK\ CODER.png);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+} 
 
 .sidebar__menu-btn {
     position: fixed;
@@ -125,3 +145,85 @@ body {
         transition-duration: 0.5s;
     }   
 }
+
+/* Adding menu article */
+
+.buy-articles h2 {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.buy-articles h2:first-child span{
+    display: block;
+    color: gold;
+    border-spacing: 0px;
+}
+.article__container-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4vw;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.main__article-btn {
+    padding: 5px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid goldenrod;
+    box-shadow: 5px 5px 5px rgb(134, 130, 102);
+    cursor: pointer;
+}
+
+.main__article-btn:hover, .main__article-btn:focus {
+    background-color: rgb(126, 114, 84);
+    border: none;
+}
+
+/* Styling individual items base on mobile view*/
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.items-container img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(83, 109, 134, 0.562);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.items-container div div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 5px;
+    padding: 5px 15px;
+    border-bottom: 2px solid rgba(94, 85, 85, 0.24);
+}
+
+.items-container div div:first-child p {
+    color: rgb(150, 128, 75);
+}
+
+/* Styling text content of items*/
+
+.main__item-content {
+    margin: 5px 10px;
+    text-align: justify;
+    word-spacing: 0.1px;
+    font-size: 1rem;
+}
+
+

@@ -8,50 +8,178 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="sidebar__menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-
-    <aside class="sidebar__container sidebar-status">
-
-        <div>
-            <img src="/images/Monk Coder.png" alt="Logo" width="75" height="60">
-            <button  class="sidebar__close-icon">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+    <header>
+        <div id = "nav__background">
+            <img src="/images/MONK CODER.png" alt="Logo" width="100%" height="250">
         </div>
+        <button class="sidebar__menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <aside class="sidebar__container sidebar-status">
+
+            <div>
+                <img src="images/MONK CODER.png" alt="Logo" width="75" height="60">
+                <button  class="sidebar__close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
 
-        <ul id="nav__links">
-            <li ><a id="home" href="#1">Home</a></li> 
-            <li ><a id="about" href="#2">About</a></li> 
-            <li ><a id="Projects" href="#3">Projects</a></li> 
-            <li ><a id="contact" href="#4">Contact</a></li>      
-        </ul>
+            <ul id="nav__links">
+                <li ><a id="home" href="#1">Home</a></li> 
+                <li ><a id="about" href="#2">About</a></li> 
+                <li ><a id="Projects" href="#3">Projects</a></li> 
+                <li ><a id="contact" href="#4">Contact</a></li>      
+            </ul>
 
-        <div class="social-handles">
-            <a href="www.facebook.com">
-                <i class="fa-brands fa-facebook" style="color: rgb(60, 60, 211);"></i>
-            </a>
-            <a href="https://twitter.com/Div237">
-                <i class="fa-brands fa-x-twitter" style="color: black;"></i>
-            </a>
-            <a href="https://github.com/empire237">
-                <i class="fa-brands fa-github" style="color: black;"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/divane-jeugo-9524b9158/">
-                <i class="fa-brands fa-linkedin" style="color: rgb(21, 21, 182);"></i>
-            </a>                
-        </div>
+            <div class="social-handles">
+                <a href="www.facebook.com">
+                    <i class="fa-brands fa-facebook" style="color: rgb(60, 60, 211);"></i>
+                </a>
+                <a href="https://twitter.com/Div237">
+                    <i class="fa-brands fa-x-twitter" style="color: black;"></i>
+                </a>
+                <a href="https://github.com/empire237">
+                    <i class="fa-brands fa-github" style="color: black;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/divane-jeugo-9524b9158/">
+                    <i class="fa-brands fa-linkedin" style="color: rgb(21, 21, 182);"></i>
+                </a>                
+            </div>
 
-    </aside> 
-
-    
-        
-
-
+        </aside> 
+    </header>
 
     <main>
+        <article class="buy-articles">
+            <h2>ACCESS MY ARTICLES
+                <span>__________</span>
+            </h2>
+            <div class="article__container-filter">
+                <button class="main__article-btn main__all-btn">All</button>
+                <button class="main__article-btn main__html-btn">HTML/CSS</button>
+                <button class="main__article-btn main__javascript-btn">JavaScript</button>
+                <button class="main__article-btn main__react-btn">React</button>
+                <button class="main__article-btn main__nodejs-btn">NodeJS</button>
+                <button class="main__article-btn main__solidity-btn">Solidity</button>
+            </div>
+
+<!-- Displaying the various items  -->
+
+            <div class="main__item-container">
+                <section class="items-container" id="html5">
+                    <img src="/images/HTML5_logo.png" alt="html5" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">HTML5</h3>
+                            <p>$ 0.90</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="css">
+                    <img src="/images/CSS3_logopng.png" alt="css3" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">CSS</h3>
+                            <p>$ 1.99</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="javascript">
+                    <img src="/images/javascript.jpg" alt="vanilla javascript" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">JavaScript</h3>
+                            <p>$ 4.99</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="react">
+                    <img src="/images/reactjs.png" alt="reactjs" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">React</h3>
+                            <p>$ 2.99</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="nodejs">
+                    <img src="/images/590px-Node.js_logo.svg.png" alt="node js" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">NodeJS</h3>
+                            <p>$ 2.50</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="solidity">
+                    <img src="/images/solidity.png" alt="solidity" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">Solidity</h3>
+                            <p>$ 15.99</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="bootstrap">
+                    <img src="/images/Bootstrap_logo.svg.png" alt="bootstrap" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">Bootstrap</h3>
+                            <p>$ 0.00</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="main__item-container">
+                <section class="items-container" id="tailwindcss">
+                    <img src="/images/Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" width="70" height="70">
+                    <div>
+                        <div>
+                            <h3 class="title">Tailwind CSS</h3>
+                            <p>$ 0.99</p>
+                        </div>
+                        <p class="main__item-content">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, animi. Velit, beatae exercitationem! Culpa repellat vel saepe autem. Reprehenderit commodi blanditiis eligendi unde id accusamus dolorum eius officiis, nobis quia.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </article>
 
     </main>
 
@@ -59,7 +187,6 @@
 
     </footer>
 
-    
     
 </body>
 <script src="script.js"></script>
