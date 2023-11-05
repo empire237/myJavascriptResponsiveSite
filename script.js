@@ -28,12 +28,12 @@ Get and define variables
 
 const allArticlesBtnContainer = document.querySelector('.article__container-btn');
 
-const allArticlesBtn = document.querySelector('.main__all-btn');
-const htmlCssArticlesBtn = document.querySelector('.main__htmlcss-btn');
-const javascriptArticlesBtn = document.querySelector('.main__javascript-btn');
-const reactArticlesBtn = document.querySelector('.main__react-btn');
-const nodejsArticlesBtn = document.querySelector('.main__nodejs-btn');
-const solidityArticlesBtn = document.querySelector('.main__solidity-btn');
+// const allArticlesBtn = document.querySelector('.main__all-btn');
+// const htmlCssArticlesBtn = document.querySelector('.main__htmlcss-btn');
+// const javascriptArticlesBtn = document.querySelector('.main__javascript-btn');
+// const reactArticlesBtn = document.querySelector('.main__react-btn');
+// const nodejsArticlesBtn = document.querySelector('.main__nodejs-btn');
+// const solidityArticlesBtn = document.querySelector('.main__solidity-btn');
 
 
 
@@ -162,7 +162,6 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
     if(e.target.classList.contains('main__htmlcss-btn')){
 
-        console.log('HTML/CSS');
         filteredArticles = articles.filter( item => {
 
             return item.tag == 'htmlcss';
@@ -173,7 +172,6 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
     } else if(e.target.classList.contains('main__javascript-btn')){
 
-        console.log('Javascript');
         filteredArticles = articles.filter( item => {
 
             return item.tag == 'javascript';
@@ -184,7 +182,6 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
     } else if(e.target.classList.contains('main__react-btn')){
 
-        console.log('Frontend');
         filteredArticles = articles.filter( item => {
     
         return item.tag == 'frontend';
@@ -195,7 +192,6 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
     } else if(e.target.classList.contains('main__nodejs-btn')){
 
-            console.log('backend');
             const filteredArticles = articles.filter( item => {
     
                 return item.tag == 'backend';
@@ -205,7 +201,6 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
     } else if(e.target.classList.contains('main__solidity-btn')){
 
-        console.log('Blockchain');
         const filteredArticles = articles.filter( item => {
     
             return item.tag == 'blockchain';
@@ -215,9 +210,15 @@ allArticlesBtnContainer.addEventListener('click', function(e){
 
      } else {
 
-        console.log('All');
         loadAllArticleItems(articles);
      }
 
 })
 
+
+
+/* 
+    ADDING A COUNTDOWN TO MY RESPONSIVE WEBSITE
+    WISH TO SET TARGETS FOR EACH TECH STACK
+    BEGINNING ReactJS on the 15th of November 2023
+*/
