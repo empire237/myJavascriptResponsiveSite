@@ -51,40 +51,61 @@
         </aside> 
     </header>
 
-    <main>
-        <div class="main__countdown-container">
+    <main class="main">
+
+                <!--
+
+                    Timer section
+
+                -->
+
+        <section class="main__section-timer--container">
+
+            <!-- button for previous -->
+
+            <button class="timer-btn--left timer-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
             
-            <div class="countdown__inner-container">
-                <!-- button for previous -->
-                <button>
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
+            <div class="main__countdown-container">
+                
+                <div class="countdown__inner-container">
 
-                <figure>
-                    <img src="/images/reactjs_with_name.png" alt="react image" width="200" height="200">
-                </figure>
-                <div>
-                    <h3>
-                        Front-end Development
-                    </h3>
-                    <p>
-                        I set a target to resume ReactJS on the <time>15th November 2023</time> on Twitter. Since then, I have encountered all sorts of problems. From electricity to internet connection. 
-                    </p>
+                    <figure>
+                        <img src="/images/reactjs_with_name.png" alt="react image" width="200" height="200">
+                    </figure>
+                    <div>
+                        <h3>
+                            Front-end Development
+                        </h3>
+                        <p>
+                            I set a target to resume ReactJS on the <time>15th November 2023</time> on Twitter. Since then, I have encountered all sorts of problems. From electricity to internet connection. 
+                        </p>
+                    </div>
+                    
                 </div>
-                <!-- Button for next  -->
-                <button>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
-            <!-- Setting the countdown here below  -->
 
-            <div class="countdown-container">
-                <p>Year | Months | Days | Hours | Mins | Secs</p>
+                <!-- Setting the countdown here below  -->
 
-            </div>
-       
+                <div class="countdown-container">
+                    <p>Year | Months | Days | Hours | Mins | Secs</p>
+
+                </div>
         
-        </div>
+            
+            </div>
+
+            <!-- Button for next  -->
+
+            <button class="timer-btn--right timer-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+
+        <!--
+            ARTICLES SECTION
+        -->
+        
         <article class="access-articles">
             <h2>ACCESS MY ARTICLES
                 <span>__________</span>
@@ -100,26 +121,21 @@
 
 <!-- Displaying the various items  -->
 
-            <div class="main__item-container">
-<!-- 
-                <div class="items-container" id="html5">
-                    <div>
-                        <img src="/images/HTML5_logo.png" alt="html5" width="70" height="70">
-                    </div>
-                    <div>
-                        <div>
-                            <h3 class="article-title">HTML5</h3>
-                            <p class="article-price">$ 0.90</p>
-                        </div>
-                        <p class="main__item-content">
-                            HTML5, short for HyperText Markup Language 5, is the latest iteration of the standard markup language used for creating web pages. It provides the structure and content of a web page, defining elements like headings, paragraphs, links, images, forms, and more. HTML5 introduced many new features and enhancements, such as support for multimedia elements, improved semantics, and better compatibility with modern web technologies.
-                        </p>
-                    </div>
-                </div> 
--->         
-             
+            <div class="main__item-container">            
             </div>
         </article>
+
+
+        <!--
+            I found this input animation on X (formerly called Twitter),
+            It looked fun to me and I decided to try it on myResponsive website
+        -->
+
+        <div class="container-inputfield">
+            <h3>Username <span id="input-counter"></span>/10</h3>
+            <input maxlength="10" class="container__input" type="text" id="input" placeholder="Enter your name ..." />
+            <div class="container__caret" id="caret"></div>
+        </div> 
 
     </main>
 

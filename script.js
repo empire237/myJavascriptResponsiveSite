@@ -28,22 +28,10 @@ Get and define variables
 
 const allArticlesBtnContainer = document.querySelector('.article__container-btn');
 
-// const allArticlesBtn = document.querySelector('.main__all-btn');
-// const htmlCssArticlesBtn = document.querySelector('.main__htmlcss-btn');
-// const javascriptArticlesBtn = document.querySelector('.main__javascript-btn');
-// const reactArticlesBtn = document.querySelector('.main__react-btn');
-// const nodejsArticlesBtn = document.querySelector('.main__nodejs-btn');
-// const solidityArticlesBtn = document.querySelector('.main__solidity-btn');
-
-
-
-// console.log(allArticleBtn.children);
-
 
 /* 
     CREATE AN ARRAY OBJECT TO FOR THE ITEMS
 */
-
 
 const articles = [
     {
@@ -105,15 +93,15 @@ const articles = [
 ];
 
 
-
-
-
 /* 
     I will have to load all the content at this level
 */
 
 window.addEventListener('DOMContentLoaded', function (){
     loadAllArticleItems(articles);
+
+    // Call the function for the animated input field from line 223
+    animatedInputField();
 });
 
 
@@ -222,3 +210,126 @@ allArticlesBtnContainer.addEventListener('click', function(e){
     WISH TO SET TARGETS FOR EACH TECH STACK
     BEGINNING ReactJS on the 15th of November 2023
 */
+
+
+
+
+
+
+/* 
+    ADDING THE ANIMATED INPUT I SAW ON TWITTER
+
+*/
+
+const animatedInputField = () => {
+    const inputEle = document.getElementById('input');
+    const caretEle = document.getElementById('caret');
+    const inputCounter = document.getElementById('input-counter');
+
+
+    const canvasEle = document.createElement('canvas');
+    const context = canvasEle.getContext('2d');
+
+
+    const inputStyles = window.getComputedStyle(inputEle);
+    const font = `${inputStyles.getPropertyValue('font-size')} ${inputStyles.getPropertyValue('font-family')}`;
+    const paddingLeft = parseInt(inputStyles.getPropertyValue('padding-left'), 10) + 2;
+    const paddingRight = parseInt(inputStyles.getPropertyValue('padding-right')) - 2;
+    console.log(paddingRight);
+
+    const caretWidth = caretEle.getBoundingClientRect().width;
+
+    const measureWidth = (text, font) => {
+        context.font = font;
+        const metrics = context.measureText(text);
+        return metrics.width;
+    };
+
+    const caretIconUpdate = (arg) => {
+        if (arg.length == 0) {
+            caretEle.style.background = 'linear-gradient(to top, rgb(210, 210, 219) 100%, rgb(200, 196, 196) 10%)';
+            
+            inputCounter.innerText = '0';
+        } else if (arg.length == 1) {
+            caretEle.style.background = 'linear-gradient(to top, blue 10%, whitesmoke 10%)';
+            
+            inputCounter.innerText = '1';           
+        } else if(arg.length == 2) {
+            caretEle.style.background = 'linear-gradient(to top, blue 20%, whitesmoke 10%)';
+            inputCounter.innerText = '2';
+        } else if(arg.length == 3) {
+            caretEle.style.background = 'linear-gradient(to top, blue 30%, whitesmoke 10%)';
+            inputCounter.innerText = '3';
+        } else if(arg.length == 4) {
+            caretEle.style.background = 'linear-gradient(to top, blue 40%, whitesmoke 10%)';
+            inputCounter.innerText = '4';
+        } else if(arg.length == 5) {
+            caretEle.style.background = 'linear-gradient(to top, blue 50%, whitesmoke 10%)';
+            inputCounter.innerText = '5';
+        } else if(arg.length == 6) {
+            caretEle.style.background = 'linear-gradient(to top, blue 60%, whitesmoke 10%)';
+            inputCounter.innerText = '6';
+        } else if(arg.length == 7) {
+            caretEle.style.background = 'linear-gradient(to top, blue 70%, whitesmoke 10%)';
+            inputCounter.innerText = '7';
+        } else if(arg.length == 8) {
+            caretEle.style.background = 'linear-gradient(to top, blue 80%, whitesmoke 10%)';
+            inputCounter.innerText = '8';
+        } else if(arg.length == 9) {
+            caretEle.style.background = 'linear-gradient(to top, blue 90%, whitesmoke 10%)';
+            inputCounter.innerText = '9';
+            caretEle.style.width = '5px';
+            caretEle.style.borderRadius = 'none';
+            
+            caretEle.innerHTML = '';
+        } else if(arg.length == 10) {
+            caretEle.style.background = 'linear-gradient(to top, blue 100%, whitesmoke 0.1%)';
+            inputCounter.innerText = '10';
+
+            setTimeout(() => console.log('Delay 0.5 second'), 50);
+
+            caretEle.style.width = '1.5rem';
+            caretEle.style.borderRadius = '0.75rem';
+            caretEle.innerHTML = `<i class="fa-solid fa-check" style="color: #ffffff;"></i>`;
+            caretEle.style.textAlign = 'center';
+            caretEle.style.transform = `translate(165px, -5%) rotate(360deg)`;
+        } 
+
+    }
+
+    const updateCaretPosition = (position) => {
+        const text = inputEle.value.substr(0, position);
+        const textWidth = measureWidth(text, font) + paddingLeft;
+        const inputWidth = inputEle.getBoundingClientRect().width;
+
+        if (textWidth + caretWidth < inputWidth) { 
+            caretEle.style.transform = `translate(${textWidth}px, -5%)`;               
+        }
+        caretIconUpdate(text);
+    };
+
+
+
+    const handleSelectionChange = () => {
+        if (document.activeElement === inputEle) {
+            updateCaretPosition(inputEle.selectionStart);
+        }
+        caretIconUpdate(inputEle.value);
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Backspace') {
+            updateCaretPosition(inputEle.value.length - 1);
+        }
+    };
+
+    inputEle.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('selectionchange', handleSelectionChange);
+
+    updateCaretPosition();
+}
+
+
+
+
+
